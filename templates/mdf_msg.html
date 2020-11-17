@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- 부트스트랩  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <body class="container">
+            <h1>mdf_msg</h1>
+            <div>
+                <form method="POST" action="/mdf_msg">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <td>msg_id :</td>
+                            <td><input id="msg_id" name="msg_id" type="text" readonly="readonly" value="{{msg_id}}"></td>
+                        </tr>
+                        <tr>
+                            <td>msg_test :</td>
+                            <td><textarea id="msg_text" name="msg_text" rows="3" cols="50">{{msg_text}}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-outline-dark btn-sm" type="submit">msg수정</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </body>
+    </head>
+</html>

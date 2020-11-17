@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- 부트스트랩  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <body class="container">
+            <h1>msg_list</h1>
+            <div>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>msg_id</th>
+                    <th>msg_text</th>
+                    <th>삭제</th>
+                    <th>수정</th>
+                </tr>
+                {% for row in msglist %}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>
+                        <button class="btn btn-outline-dark btn-sm" type="button" onclick="location.href='/del_msg?msg_id={{row[0]}}'">삭제</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline-dark btn-sm" type="button" onclick="location.href='/mdf_msg?msg_id={{row[0]}}&msg_text={{row[1]}}'">수정</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            </div>
+            <a href="/add_msg">msg입력</a>
+        </body>
+    </head>
+</html>
